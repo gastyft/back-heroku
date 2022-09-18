@@ -4,18 +4,18 @@ package com.miportfolio.dto;
 
 public class MensajeCloudinary {
        
-    private String mensaje;
+    private String mensajeCloudinary;
 
-    public Mensaje() {
+    public MensajeCloudinary() {
     }
 
-    public Mensaje(String mensajeCludinary) {
-        this.mensaje = mensaje;
+    public MensajeCloudinary(String mensajeCloudinary) {
+        this.mensajeCloudinary = mensajeCloudinary;
     }
     public String getMensajeCloudinary(){
-     return mensaje;
+     return mensajeCloudinary;
 }
-    public void setMensajeCloudinary(String mensaje){
-     this.mensaje.mensaje;   
+    public void setMensajeCloudinary(String mensajeCloudinary){
+     this.mensajeCloudinary = mensajeCloudinary;   
        }
 }

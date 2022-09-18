@@ -33,7 +33,7 @@ import com.miportfolio.security.service.UsuarioService;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin
+@CrossOrigin(origins="https://portfolio-yo-programo.web.app")
 public class AuthController {
 
     @Autowired

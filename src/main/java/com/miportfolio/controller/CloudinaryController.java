@@ -47,23 +47,7 @@ public class CloudinaryController {
         return new ResponseEntity(list, HttpStatus.OK);
         
     }
-    @PutMapping("editar/{id}")
-  public  Imagen editImagen (@PathVariable Long id,
-            @RequestParam ("original_filename") String nuevoOriginal,
-            @RequestParam("url") String nuevaUrl,
-            @RequestParam("public_id") String nuevaPublic) {
-    
-    Imagen img= imagenService.getOne(id);
-    
-    img.setOriginal(nuevoOriginal);
-    img.setUrl(nuevaUrl);
-    img.setPublic_id(nuevaPublic);
-  
-    
-    imagenService.save(img);
-    
-    return img;
-  }
+ 
             @PostMapping("/upload")
             public ResponseEntity<?> upload(@RequestParam MultipartFile multipartFile) throws IOException{
                             

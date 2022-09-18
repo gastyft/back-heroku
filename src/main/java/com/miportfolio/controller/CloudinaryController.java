@@ -53,7 +53,7 @@ public class CloudinaryController {
           
                 BufferedImage bi = ImageIO.read(multipartFile.getInputStream());
                if(bi== null){
-                return new ResponseEntity(new MensajeCloudinary("imagen no valida"), HttpStatus.BAD_REQUEST);
+                return new ResponseEntity(new Mensaje("imagen no valida"), HttpStatus.BAD_REQUEST);
             }
                else{
                
@@ -63,7 +63,7 @@ public class CloudinaryController {
                                 (String)result.get("public_id"));
                 
                 imagenService.save(imagens);
-                return new ResponseEntity(new MensajeCloudinary("imagen subida"), HttpStatus.OK);
+                return new ResponseEntity(new Mensaje("imagen subida"), HttpStatus.OK);
             }}
         
             
@@ -72,11 +72,11 @@ public class CloudinaryController {
             @DeleteMapping("/cloudinary/delete/{id}")
             public ResponseEntity<?> delete(@PathVariable("id")int id) throws IOException{
                 if(!imagenService.exists(id))
-                    return new ResponseEntity(new MensajeCloudinary("no existe"), HttpStatus.NOT_FOUND);
+                    return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
                 Imagen imagen= imagenService.getOne(id).get();
                 Map result= cloudinaryService.delete(imagen.getImagen_Id());
                 imagenService.delete(id);
-                return new ResponseEntity(new MensajeCloudinary("imagen eliminada"), HttpStatus.OK);
+                return new ResponseEntity(new Mensaje("imagen eliminada"), HttpStatus.OK);
             }
          
             }

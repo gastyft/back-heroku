@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,7 +27,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/cloudinary")
 @CrossOrigin(origins="https://portfolio-yo-programo.web.app")
 
 public class CloudinaryController {
@@ -41,14 +40,14 @@ public class CloudinaryController {
     
 
     
-    @GetMapping("/list")
+    @GetMapping("/cloudinary/list")
     public ResponseEntity<List<Imagen>> List(){
         List<Imagen> list= imagenService.List();
         return new ResponseEntity(list, HttpStatus.OK);
         
     }
  
-            @PostMapping("/upload")
+            @PostMapping("/cloudinary/upload")
             public ResponseEntity<?> upload(@RequestParam MultipartFile multipartFile) throws IOException{
                             
           
@@ -70,7 +69,7 @@ public class CloudinaryController {
             
 
             
-            @DeleteMapping("/delete/{id}")
+            @DeleteMapping("/cloudinary/delete/{id}")
             public ResponseEntity<?> delete(@PathVariable("id")int id) throws IOException{
                 if(!imagenService.exists(id))
                     return new ResponseEntity(new MensajeCloudinary("no existe"), HttpStatus.NOT_FOUND);

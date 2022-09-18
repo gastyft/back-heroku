@@ -63,7 +63,7 @@ public class CloudinaryController {
                                 (String)result.get("public_id"));
                 
                 imagenService.save(imagens);
-                return new ResponseEntity(new Mensaje("imagen subida"), HttpStatus.OK);
+                return new ResponseEntity(new MensajeCloudinary("imagen subida"), HttpStatus.OK);
             }}
         
             

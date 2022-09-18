@@ -65,6 +65,7 @@ return interHard.getHardSkills();
     hard.setIngles(nuevaingles);
     hard.setItaliano(nuevaitaliano);
     hard.setTrabajo_equipo(nuevotrabajo_equipo);
+    hard.setComunicacion(nuevocomunicacion);
     interHard.saveHardSkills(hard);
     
     return hard;

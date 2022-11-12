@@ -46,26 +46,17 @@ return interHard.getHardSkills();
 
     @PutMapping("/hardskills/editar/{id}") //puede ser con el ID "/personas/editar/{id}"
     public HardSkills editHardSkills (@PathVariable Long id,
-            @RequestParam ("frontend") int nuevofrontend,
-            @RequestParam("backend") int nuevobackend,
-            @RequestParam("base_datos") int nuevabase_datos,
-            @RequestParam("ingles") int nuevaingles,
-            @RequestParam("italiano") int nuevaitaliano,
-            @RequestParam("trabajo_equipo") int  nuevotrabajo_equipo,
-            @RequestParam("comunicacion") int nuevocomunicacion) {
+            @RequestParam ("nombre_hard") String nuevonombre_hard,
+            @RequestParam("number_hard") int nuevonumber_hard) {
     HardSkills hard = interHard.findHardSkills(id);
     
     
-    hard.setFrontend(nuevofrontend);
-    hard.setBackend(nuevobackend);
-    hard.setBase_datos(nuevabase_datos);
-    hard.setIngles(nuevaingles);
-    hard.setItaliano(nuevaitaliano);
-    hard.setTrabajo_equipo(nuevotrabajo_equipo);
-    hard.setComunicacion(nuevocomunicacion);
+    hard.setNombre_hard(nuevonombre_hard);
+    hard.setNumber_hard(nuevonumber_hard);
     interHard.saveHardSkills(hard);
     
     return hard;
+    
     
     
     }

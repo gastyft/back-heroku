@@ -21,9 +21,6 @@ public class Estudios {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id_estudios;
 
-    private String primaria;
-    private String secundaria;
-    private String universidad;
-    private String actual;
-
+      private String nombre_estudio;
+    private String estudio_detail;
 }

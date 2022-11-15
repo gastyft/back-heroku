@@ -58,8 +58,8 @@ return interExperiencia.getExperiencia();
     
     }
       @GetMapping("/experiencia/traer/experiencia/{id_exp}")
-    public Experiencia_laboral findExperiencia(Long id_exp){
-return interExperiencia.findExperiencia((id_exp));
+    public Experiencia_laboral findExperiencia(@PathVariable Long id_exp){
+return interExperiencia.findExperiencia(id_exp);
 }
 }
 

@@ -61,8 +61,8 @@ return interHard.getHardSkills();
     
     }
     
-     @GetMapping("/hardskills/traer/perfil")
+     @GetMapping("/hardskills/traer/perfil/26")
     public HardSkills findHardSkills(){
-return interHard.findHardSkills((long)1);
+return interHard.findHardSkills((long)26);
 }
 }

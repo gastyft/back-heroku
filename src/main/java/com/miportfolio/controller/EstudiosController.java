@@ -49,8 +49,8 @@ return interEstudios.getEstudios();
     Estudios est= interEstudios.findEstudios(id_estudios);
     
     
-    est.setNombre_estudio(nuevanombreestudio);
-    est.setEstudio_detail(nuevoestudiodetail);
+    est.setNombreestudio(nuevanombreestudio);
+    est.setEstudiodetail(nuevoestudiodetail);
    
     
     interEstudios.saveEstudios(est);

@@ -17,8 +17,8 @@ public class HardSkills {
      @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private String nombre_hard;
-    private int number_hard;
+    private String nombrehard;
+    private int numberhard;
     
     
 }

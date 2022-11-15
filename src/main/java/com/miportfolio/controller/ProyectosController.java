@@ -58,8 +58,8 @@ return interProyectos.getProyectos();
     
     }
       @GetMapping("/proyectos/traer/proyectos/{id_proyectos}")
-    public Proyectos findProyectos(Long id_proyectos){
-return interProyectos.findProyectos(id_proyectos); 
+    public Proyectos findProyectos(@PathVariable Long id){
+return interProyectos.findProyectos(id); 
 }
 
 }

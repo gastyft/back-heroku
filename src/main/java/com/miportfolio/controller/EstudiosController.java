@@ -43,14 +43,14 @@ return interEstudios.getEstudios();
     
     @PutMapping("/estudios/editar/{id_estudios}") //puede ir por id ejemplo  "/estudios/editar/{id_estudios}"
     public Estudios editEstudios (@PathVariable Long id_estudios,
-           @RequestParam ("nombre_estudio") String nuevanombre_estudio,
-            @RequestParam("estudio_detail") String nuevoestudio_detail){
+           @RequestParam ("nombreestudio") String nuevanombreestudio,
+            @RequestParam("estudiodetail") String nuevoestudiodetail){
     
     Estudios est= interEstudios.findEstudios(id_estudios);
     
     
-    est.setNombre_estudio(nuevanombre_estudio);
-    est.setEstudio_detail(nuevoestudio_detail);
+    est.setNombre_estudio(nuevanombreestudio);
+    est.setEstudio_detail(nuevoestudiodetail);
    
     
     interEstudios.saveEstudios(est);

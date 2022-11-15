@@ -60,8 +60,8 @@ return interEstudios.getEstudios();
     }
     
      @GetMapping("/estudios/traer/estudios")
-    public Estudios findEstudios(){
-return interEstudios.findEstudios((long)1);
+    public Estudios findEstudios(@PathVariable Long id){
+return interEstudios.findEstudios(id);
 }
     
 }

@@ -1,6 +1,6 @@
 
 package com.miportfolio.security.util;
-/*
+
 import com.miportfolio.security.entity.Rol;
 import com.miportfolio.security.enums.RolNombre;
 import com.miportfolio.security.service.RolService;
@@ -22,5 +22,5 @@ public class createRoles implements CommandLineRunner {
          
     }
 } 
-*/
+
 

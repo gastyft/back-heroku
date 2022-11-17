@@ -67,7 +67,7 @@ return interPersona.getPersonas();
     
     }
     
-     @GetMapping("/personas/traer/perfil/{id}")
+     @GetMapping("/personas/traer/perfil")
     public Persona findPersonas(){
 return interPersona.findPersona((long)1);
 }

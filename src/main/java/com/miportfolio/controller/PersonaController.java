@@ -69,7 +69,7 @@ return interPersona.getPersonas();
     
      @GetMapping("/personas/traer/perfil")
     public Persona findPersonas(){
-return interPersona.findPersona((long)1);
+return interPersona.findPersona((long)10);
 }
 }
             

@@ -69,8 +69,8 @@ return interPersona.getPersonas();
     
     
   @GetMapping("/personas/traer/personas/{id}")
-  public Persona findPersonas(@PathVariable id) { 
-        return  interPersona.findPersonas(id);
+  public Persona findPersona (@PathVariable Long id) { 
+        return  interPersona.findPersona(id);
            
     }
 }

@@ -67,10 +67,17 @@ return interPersona.getPersonas();
     
     }
     
-     @GetMapping("/personas/traer/personas/{id}")
-    public Persona findPersona(@PathVariable Long id){
+    
+  /*  public Persona findPersona(@PathVariable Long id){
 return interPersona.findPersona(id);
-}
+}*/
+  @GetMapping("/personas/traer/personas/{id}")
+  public Persona findPersona(@PathVariable("id") Long id) { 
+        return interPersona.findPersona(id)
+             
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build()); 
+    }
 }
             
     

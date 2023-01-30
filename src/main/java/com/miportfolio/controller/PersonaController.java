@@ -1,4 +1,3 @@
-
 package com.miportfolio.controller;
 
 import com.miportfolio.model.Persona;
@@ -69,7 +68,7 @@ return interPersona.getPersonas();
     
     
   @GetMapping("/personas/traer/personas/{id_pers}")
-  public Persona findPersonas(@PathVariable Long id_pers){ 
+  public Persona findPersona(@PathVariable Long id_pers){ 
         return interPersona.findPersona(id_pers);
            
     }

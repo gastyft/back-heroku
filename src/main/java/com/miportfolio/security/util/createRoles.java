@@ -9,7 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 
-/*
+
 @Component
 public class createRoles implements CommandLineRunner {
        @Autowired
@@ -25,5 +25,5 @@ public class createRoles implements CommandLineRunner {
 } 
 
 
-*/
+
 

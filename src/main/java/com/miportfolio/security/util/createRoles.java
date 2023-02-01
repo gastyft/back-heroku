@@ -1,4 +1,4 @@
-/*
+
 package com.miportfolio.security.util;
 
 import com.miportfolio.security.entity.Rol;
@@ -26,4 +26,4 @@ public class createRoles implements CommandLineRunner {
 
 
 
-*/
+
